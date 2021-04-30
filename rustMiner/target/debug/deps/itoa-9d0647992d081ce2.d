@@ -1,0 +1,7 @@
+/Users/tom/Desktop/Rust/rustMiner/target/debug/deps/itoa-9d0647992d081ce2.rmeta: /Users/tom/.cargo/registry/src/github.com-1ecc6299db9ec823/itoa-0.4.7/src/lib.rs
+
+/Users/tom/Desktop/Rust/rustMiner/target/debug/deps/libitoa-9d0647992d081ce2.rlib: /Users/tom/.cargo/registry/src/github.com-1ecc6299db9ec823/itoa-0.4.7/src/lib.rs
+
+/Users/tom/Desktop/Rust/rustMiner/target/debug/deps/itoa-9d0647992d081ce2.d: /Users/tom/.cargo/registry/src/github.com-1ecc6299db9ec823/itoa-0.4.7/src/lib.rs
+
+/Users/tom/.cargo/registry/src/github.com-1ecc6299db9ec823/itoa-0.4.7/src/lib.rs:
