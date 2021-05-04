@@ -1,0 +1,10 @@
+Gmail Zugangsdaten
+RustMinerITA@gmail.com
+RUSTMINER123
+
+Api (Infura):
+PW: RUSTMINER123
+
+URL with pub key:
+
+https://mainnet.infura.io/v3/9f006992257e4abdb744da506747784a
