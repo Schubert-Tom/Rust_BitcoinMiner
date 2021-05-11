@@ -1,8 +1,9 @@
-Gmail Zugangsdaten
+Gmail Zugangsdaten:
 RustMinerITA@gmail.com
 RUSTMINER123
 
 Api (Infura):
+RustMinerITA@gmail.com
 PW: RUSTMINER123
 
 URL with pub key:
