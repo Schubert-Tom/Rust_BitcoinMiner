@@ -46,9 +46,9 @@ fn main() {
                 }
             }
             // Jump into Routine to get permanent Data solv them them and submit shares
-            
+            let mut data: Vec<u8>= Vec::new();
             loop{ 
-                let mut data: Vec<u8>= Vec::new();
+                reader.flush()
                 match reader.read_until(b'\n',&mut data) {
                     Ok(_) => {
                         let mut text1 = str::from_utf8(&data).expect("Could not convert to String");

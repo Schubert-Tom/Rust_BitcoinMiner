@@ -1,4 +1,3 @@
-[17:28] Seeger Andrik (inf19006)
 {​​​​​"id":1,"result":[[["mining.set_difficulty","b4b6693b72a50c7116db18d6497cac52"],["mining.notify","ae6812eb4cd7735a302a8a9dd95cf71f"]],"4bc6af58",4],"error":null}​​​​​
 
 {​​​​​"id":null,"params":[16],"method":"mining.set_difficulty"}​​​​​

@@ -48,7 +48,9 @@ impl TCPclient {
         match stream.read(&mut data) {
             Ok(_) => {
                 let text = from_utf8(&data).unwrap();
+                println!("\n\n\n");
                 println!("Answer: {}", text);
+                println!("\n\n\n");
                 },
             Err(e) => {
                 println!("Failed to receive data: {}", e);
