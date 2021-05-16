@@ -1,0 +1,18 @@
+[package]
+name = "rust_miner"
+version = "0.1.0"
+authors = ["suba14 <mot.schubert@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[[bin]]
+name = "ITA_bitcoinminer"
+path= "src/main.rs"
+
+[dependencies]
+serde_json = "1.0"
+hex = "0.4"
+crypto-hash = "0.3.4"
+
