@@ -1,1 +1,1 @@
-/Users/tom/Desktop/Rust/rust_miner/target/debug/ITA_bitcoinminer: /Users/tom/Desktop/Rust/rust_miner/src/main.rs
+/Users/tom/Desktop/Rust/rust_miner/target/debug/ITA_bitcoinminer: /Users/tom/Desktop/Rust/rust_miner/src/connect.rs /Users/tom/Desktop/Rust/rust_miner/src/job.rs /Users/tom/Desktop/Rust/rust_miner/src/lib.rs /Users/tom/Desktop/Rust/rust_miner/src/main.rs /Users/tom/Desktop/Rust/rust_miner/target/debug/build/num-bigint-2e25f12b5e802c9d/out/radix_bases.rs build.rs

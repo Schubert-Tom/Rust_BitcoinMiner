@@ -1,53 +1,42 @@
 // File for Struct Jobs from 
-
 use std::fmt::{self, Debug, Formatter};
-// Import lib.rs functions
-use super::*;
 
 pub struct Job{
-    pub index: u32,
-    pub timestamp: u128,
-    pub hash: Vec<u8>,
+    pub job_id: Vec<u8>,//ich
+    pub extranonce1: Vec<u8>,
+    pub extranonce2: u32,
     pub prev_block_hash: Vec<u8>,
-    pub nonce: u64,
-    pub payload: String,
+    pub coinb1: Vec<u8>,
+    pub coinb2: Vec<u8>,
+    pub merkle_branch:[Vec<u8>;12],
+    pub version:Vec<u8>,
+    pub nbits:u32,
+    pub ntime:Vec<u8>,
 }
 
-// Individual Debug Print for each job
+// Own debug trait
 impl Debug for Job {
     fn fmt (&self, f: &mut Formatter) -> fmt::Result {
-        write!(f, "Block[{}]: {} at: {} with: {} nonce: {}",
-            &self.index,
-            &hex::encode(&self.hash),
-            &self.timestamp,
-            &self.transactions.len(),
-            &self.nonce,
+        write!(f, "Job[{}]: with prev_block_hash {} ...",
+            &hex::encode(&self.job_id),
+            &hex::encode(&self.prev_block_hash),
         )
     }
 }
-
-
 impl Job{
-     fn new (index: u32,timestamp: u128,prev_block_hash: BlockHash,
-        nonce: u64,payload: String,)->Self{
+     pub fn new (job_id:Vec<u8>,extranonce1: Vec<u8>, extranonce2: u32, prev_block_hash: Vec<u8>, coinb1: Vec<u8>, coinb2: Vec<u8>,
+    merkle_branch:[Vec<u8>;12], version:Vec<u8>, nbits:u32, ntime:Vec<u8>)->Self{
             Job{
-                index,
-                timestamp,
-                hash: vec![0; 32],
-                prev_block_hash,
-                nonce,
-                payload
+                 job_id,
+                 extranonce1,
+                 extranonce2,
+                 prev_block_hash,
+                 coinb1,
+                 coinb2,
+                 merkle_branch,
+                 version,
+                 nbits,
+                 ntime,
             }
         }
-        // Vec<u8> for [FF,A5,B9,..] writing of hex values
-        pub fn strhex_to_vector(hex: &str) -> Vec<u8>{
-            let mut res = vec![];
-            res.extend(hex.chars().map(strhex_to_u8));
-            res;
-        }
-    
-        pub fn hash(&self,V)->Vec<u8>{
-            return crypto_hash::digest(crypto_hash::Algorithm:SHA256, &self.conv_to_bytes)
-        }
-     
 }
