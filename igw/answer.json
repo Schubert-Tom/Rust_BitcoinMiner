@@ -1,4 +1,0 @@
-
-    {"id":1,"jsonrpc":"2.0","result":true},
-    {"id":2,"jsonrpc":"2.0","result":true},
-    {"id":6,"jsonrpc":"2.0","method":"mining.notify","params":["f20309d728d77194342dabdc85d7a0fc98b4c6bfb895f0434123b14365af7e9a","f20309d728d77194342dabdc85d7a0fc98b4c6bfb895f0434123b14365af7e9a","7aa37edf8729133537bc12e08304d81ec2d541fdcdd579647ed3daeb0763d30c","00000000ffff00000000ffff00000000ffff00000000ffff00000000ffff0000",true]}}
