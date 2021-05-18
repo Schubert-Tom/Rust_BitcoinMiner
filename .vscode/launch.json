@@ -5,16 +5,47 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(lldb) Starten",
-      "type": "cppdbg",
+      "type": "lldb",
       "request": "launch",
-      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "name": "Cargo launch",
+      "cargo": {
+        "args": ["build", "--lib"]
+      },
+      "program": "${cargo:program}",
+      "args": []
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'rust_miner'",
+      "cargo": {
+        "args": ["build", "--bin=rust_miner", "--package=rust_miner"],
+        "filter": {
+          "name": "rust_miner",
+          "kind": "bin"
+        }
+      },
       "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb"
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'rust_miner'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=rust_miner",
+          "--package=rust_miner"
+        ],
+        "filter": {
+          "name": "rust_miner",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

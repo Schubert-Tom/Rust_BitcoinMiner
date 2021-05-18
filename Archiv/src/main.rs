@@ -6,7 +6,16 @@ use std::str;
 use hex::decode;
 use bitcoin_hashes::sha256d;
 
-
+pub fn build_root(branches: &[Vec<u8>], coinbase: &Vec<u8>) -> Vec<u8>
+{
+    let mut root = vec![];
+    for branch in branches 
+    {
+        let to_hash = root.extend(branch);
+        root = doublesha(to_hash);
+    }
+    root //= root.reverse()
+}
 //extern crate crypto;
 
 fn main() {
@@ -23,7 +32,9 @@ let result = hasher.finalize();
 println!("{}", miner::build_root(&[], "0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c"));
 
     println!("{}", miner::ret_extranonce2(10));
-    println!("{}", miner::build_coinbase("abc", "defg", "hijk", "lmnop"));
+    let mut cb1 = Vec::new();
+    cb1.push(1);
+    println!("{:?}", miner::build_coinbase(& cb1, "defg", "hijk", "lmnop"));
     let mut sha = Sha256::new(); 
     sha.update("1111");
     let result = sha.finalize();
