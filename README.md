@@ -10,8 +10,8 @@ Falls eine valide Lösung gefunden wird, wird diese über das Stratum Protokoll 
 # Zusätzliche Informationen
 
 Hierbei handelt es sich lediglich um ein Proof of Concept.
-Mögliche Rendite und Erfolge beim Minen sind zwar nicht ausgeschlossen aber durch die einfache Implementierung und limitierte Rechenleistung von CPUs
+Mögliche Rendite und Erfolge beim Minen sind zwar nicht ausgeschlossen aber durch die einfache Implementierung und limitierte Rechenleistung der CPU
 eher unwahrscheinlich.
 
-Der verwendete Slush-Pool Account kann in der Datei `main.rs` verändert werden.
+Die Login-Daten des verwendeten Slush-Pool Accounts können in der Datei `main.rs` angepasst werden.
 
